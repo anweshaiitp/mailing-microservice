@@ -22,9 +22,9 @@ router.get('/', function(req, res, next) {
 });
 router.post('/text', function(req, res, next){
 	if(!req.body.authID || req.body.authID!="anw2k18iitp")
-		return res.send("503");
+		return res.send("403");
 	var mailOptions = {
-	  from: emailID,
+	  from: "Anwesha Registration <"+emailID+">",
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
 	  html: req.body.body,
@@ -43,7 +43,7 @@ router.post('/text', function(req, res, next){
 
 router.post('/qr', function(req, res, next){
 	if(!req.body.authID || req.body.authID!="anw2k18iitp")
-		return res.send("503");
+		return res.send("403");
 
 	// var req.body.body.replace("***IMAGEFILEURLHERE***", "cid:"+req.body.anwID);
 	var mailOptions = {
