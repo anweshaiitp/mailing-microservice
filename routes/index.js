@@ -24,11 +24,11 @@ router.post('/text', function(req, res, next){
 	if(!req.body.authID || req.body.authID!="anw2k18iitp")
 		return res.send("403");
 	var mailOptions = {
-	  from: "Anwesha Registration <"+emailID+">",
+	  from: "Anwesha Web Team <"+emailID+">",
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
-	  html: req.body.body,
-	  text:req.body.body
+	  html: req.body.bodyhtml,
+	  text:req.body.bodyplain,
 	};
 
 	transporter.sendMail(mailOptions, function(error, info){
@@ -47,11 +47,11 @@ router.post('/qr', function(req, res, next){
 
 	// var req.body.body.replace("***IMAGEFILEURLHERE***", "cid:"+req.body.anwID);
 	var mailOptions = {
-	  from: emailID,
+	  from: "Anwesha Web Team <"+emailID+">",
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
-	  html: req.body.body,
-	  text:req.body.body,
+	  html: req.body.bodyhtml,
+	  text:req.body.bodyplain,
 	  attachments: [
 	    {
 	      filename: "anw"+req.body.anwID+".png",
