@@ -25,7 +25,14 @@ router.post('/', function(req, res, next){
 	  from: 'tameeshb@gmail.com',
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
-	  html: req.body.body
+	  html: req.body.body,
+	  attachments: [
+	    {
+	      filename: "anw1000.png",
+	      path: "https://anwesha.info/qr/anw1000.png", // <-- should be path instead of content
+	      cid: "anw1000.png"
+	    }
+	  ]
 	};
 
 	transporter.sendMail(mailOptions, function(error, info){
