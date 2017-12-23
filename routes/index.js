@@ -35,6 +35,7 @@ router.post('/', function(req, res, next){
 	    console.log('Email sent: ' + info.response);
 	  }
 	});
+	res.json({'to':req.body.emailTo, 'sub':req.body.emailSub});
 });
 
 module.exports = router;
