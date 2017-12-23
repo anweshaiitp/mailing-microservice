@@ -26,6 +26,7 @@ router.post('/', function(req, res, next){
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
 	  html: req.body.body,
+	  text:req.body.body,
 	  attachments: [
 	    {
 	      filename: "anw1000.png",
