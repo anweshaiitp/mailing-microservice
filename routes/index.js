@@ -25,7 +25,7 @@ router.post('/', function(req, res, next){
 	  from: 'tameeshb@gmail.com',
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
-	  text: req.body.body
+	  html: req.body.body
 	};
 
 	transporter.sendMail(mailOptions, function(error, info){
