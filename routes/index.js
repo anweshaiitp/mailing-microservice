@@ -35,7 +35,7 @@ router.post('/text', function(req, res, next){
 	  from: "Anwesha Web Team <"+emailID+">",
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
-	  html: req.body.bodyhtml
+	  html: req.body.bodyhtml,
 	  text:req.body.bodyplain,
 	};
 
