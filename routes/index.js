@@ -10,10 +10,10 @@ var transporter = nodemailer.createTransport({
   //   user: emailID,
   //   pass: 'anwesha2k14'
   // }
-    pool: true,
-    host: 'anwesha.info',
-    port: 465,
-    secure: true, // use TLS
+    // pool: true,
+    host: 'mail.anwesha.info',
+    port: 587,
+    secure: false, // use TLS
     auth: {
         user: 'devteam@anwesha.info',
         pass: '@nwesh@2k18'
