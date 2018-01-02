@@ -5,11 +5,19 @@ var emailID = 'info.anweshaiitp@gmail.com';
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: emailID,
-    pass: 'anwesha2k14'
-  }
+  // service: 'gmail',
+  // auth: {
+  //   user: emailID,
+  //   pass: 'anwesha2k14'
+  // }
+    pool: true,
+    host: 'anwesha.info',
+    port: 465,
+    secure: true, // use TLS
+    auth: {
+        user: 'devteam@anwesha.info',
+        pass: '@nwesh@2k18'
+    }
 });
 
 
@@ -27,7 +35,7 @@ router.post('/text', function(req, res, next){
 	  from: "Anwesha Web Team <"+emailID+">",
 	  to: req.body.emailTo,
 	  subject: req.body.emailSub,
-	  html: req.body.bodyhtml,
+	  html: req.body.bodyhtml
 	  text:req.body.bodyplain,
 	};
 
