@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-var emailID = 'info.anweshaiitp@gmail.com';
+var emailID = 't3byt3@gmail.com';
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: emailID,
-    pass: 'anwesha2k14'
+    pass: 'Pswd4t3.'
   }
     // // pool: true,
     // host: 'mail.anwesha.info',
