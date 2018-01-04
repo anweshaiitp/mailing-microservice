@@ -8,7 +8,7 @@ var transporter = nodemailer.createTransport({
   service: 'hotmail',
   auth: {
     user: emailID,
-    pass: '@nwesh@2k18.'
+    pass: '@nwesh@2k18'
   }
     // // pool: true,
     // host: 'mail.anwesha.info',
