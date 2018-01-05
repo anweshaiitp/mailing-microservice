@@ -12,14 +12,6 @@ var transporter = nodemailer.createTransport({
     user: emailID,
     pass: 'password'
   }
-    // // pool: true,
-    // host: 'mail.anwesha.info',
-    // port: 587,
-    // secure: false, // use TLS
-    // auth: {
-    //     user: 'devteam@anwesha.info',
-    //     pass: '@nwesh@2k18'
-    // }
 });
 
 
