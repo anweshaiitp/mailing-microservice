@@ -3,14 +3,14 @@ var fs = require("fs");
 var ejs = require("ejs");
 
 var router = express.Router();
-var emailID = 'anwesha2018@hotmail.com';
+var emailID = 'email@hotmail.com';
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
   service: 'hotmail',
   auth: {
     user: emailID,
-    pass: '@nwesh@2k18'
+    pass: 'password'
   }
     // // pool: true,
     // host: 'mail.anwesha.info',
@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.post('/text', function(req, res, next){
-	if(!req.body.authID || req.body.authID!="anw2k18iitp")
+	if(!req.body.authID || req.body.authID!="<authkey>")
 		return res.send("403");
 	var mainUrl = "";
 	if(req.body.url){
